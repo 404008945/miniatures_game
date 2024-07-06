@@ -26,6 +26,9 @@ public class  Main {
         System.out.println("请开始输入");
         while (scanner.hasNext()){
             String line = scanner.nextLine();
+            if (line == null || line.trim().isEmpty()) {
+                continue;
+            }
             String[] split = line.split(" ");
             int width = Integer.parseInt(split[0]);
             int height = Integer.parseInt(split[1]);
